@@ -1,0 +1,26 @@
+.popupheader, .closebtn {
+    background-color: #5F1EBE;
+    color: #FFFFFF !important;
+}
+
+/* .modalcontent > .modalbody {
+    background-color: white;
+    color: black;
+}
+ */
+.mandatory {
+    color: red;
+}
+
+.cancelbtn {
+    color: #242424 !important;
+    background-color: #CCCCCC !important;
+    border: 1px solid #CCCCCC !important;
+    width: 25%;
+}
+
+.submitbtn {
+    color: #FFFFFF !important;
+    background-color: #5F1EBE !important;
+    width: 25%;
+}

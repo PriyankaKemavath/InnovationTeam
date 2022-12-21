@@ -1,0 +1,23 @@
+.header {
+    color: #5F1EBE;
+}
+
+label {
+    font-weight: 500;
+}
+
+.mandatory {
+    color: red;
+}
+
+.error {
+    color: red;
+    font-size: small;
+    font-style: italic;
+}
+
+.submitbtn {
+    color: #FFFFFF !important;
+    background-color: #5F1EBE !important;
+    /* width: 25%; */
+}

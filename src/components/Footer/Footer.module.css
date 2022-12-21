@@ -1,0 +1,10 @@
+footer {  
+    background: #00A1F1;  
+    color: white;  
+    height: 34px;
+    text-align: center;
+}  
+
+span {
+    vertical-align: middle;
+}

@@ -1,0 +1,13 @@
+.upload {
+    cursor: pointer;
+}
+
+.category {
+   padding: 0 0 10px 0;
+   color: #5F1EBE;
+}
+
+.category .icon {
+    font-size: 15px;
+    font-weight: 500;
+}

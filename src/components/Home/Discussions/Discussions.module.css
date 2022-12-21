@@ -1,0 +1,24 @@
+.name {
+    font-size: 15px;
+}
+
+.designation {
+    font-size: 12px;
+}
+
+.description {   
+    font-size: 12px;
+    margin: 0px 0px 5px 0px;
+}
+
+.text-size {
+    font-size: 12px;
+}
+
+.comments {
+    cursor: pointer;
+}
+
+.comment-text {
+    font-size: 15px;
+}

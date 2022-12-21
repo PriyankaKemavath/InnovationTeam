@@ -1,0 +1,9 @@
+.navbar {
+    background: #411482 !important;
+}
+
+.active {
+    border-bottom: 4px solid #C5B4F7;
+}
+
+
