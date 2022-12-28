@@ -5,7 +5,7 @@ import Spinner from "react-bootstrap/Spinner";
 const LoadingModal = (props) => {
   return (
     <Modal
-      show={props.isOpen}
+      show={props.show}
       {...props}
       size="sm"
       aria-labelledby="contained-modal-title-vcenter"

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { postEmployeeDetails } from "../../../fetchers/postFetchers";
 import LoadingModal from "../../Modals/LoadingModal/LoadingModal";
+import ErrorModal from "../../Modals/ErrorModal/ErrorModal";
 
 import classes from "./EmployeeForm.module.css";
 
@@ -22,6 +23,7 @@ const EmployeeForm = () => {
   const [nameError, setNameError] = useState();
   const [imageError, setImageError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [postError, setPostError] = useState({ status: false, message: "" });
 
   const empNameChangeHandler = (event) => {
     const nameRegExp = /^[A-Za-z][A-Za-z\s]*$/;
@@ -126,14 +128,27 @@ const EmployeeForm = () => {
         console.log("Posted successfully!");
       })
       .catch((error) => {
+        setIsSubmitted(false);
+        setPostError({ status: true, message: error.message });
+        //navigate("/");
         console.log(error, error.message, "error");
       });
+  };
+
+  const handleModalClose = () => {
+    setPostError({ status: false, message: "" });
+    navigate("/");
   };
 
   return (
     <div className="container">
       <h4 className={`mt-3 text-center ${classes.header}`}>Employee Form</h4>
-      <LoadingModal isOpen={isSubmitted} />
+      <LoadingModal show={isSubmitted} />
+      <ErrorModal
+        show={postError.status}
+        postError={postError.message}
+        handleModalClose={handleModalClose}
+      />
       <form className="mt-5" onSubmit={onSubmitHandler}>
         <div className="form-row">
           <div className="form-group col-md-6">
